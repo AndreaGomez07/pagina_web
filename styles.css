@@ -1,0 +1,260 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background: linear-gradient(135deg, #003366, #0066cc);
+    color: white;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffde59;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.hero {
+    background: linear-gradient(135deg, #003366, #0066cc);
+    color: white;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-bottom: 5px solid #ffde59;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-out;
+}
+
+.cta {
+    background-color: #ffde59;
+    color: #003366;
+    padding: 15px 30px;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.cta:hover {
+    transform: scale(1.1);
+    background-color: #ffc107;
+}
+
+.content-section {
+    margin: 60px 0;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.content-section h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #003366;
+    position: relative;
+}
+
+.content-section p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.toggle-info {
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.toggle-info:hover {
+    background-color: #004080;
+}
+
+.info-box {
+    margin-top: 15px;
+    padding: 15px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+    overflow: hidden;
+}
+
+.info-box.hidden {
+    max-height: 0;
+    opacity: 0;
+}
+
+.info-box.show {
+    max-height: 500px;
+    opacity: 1;
+}
+
+.gallery {
+    background: #f4f4f9;
+    padding: 20px 0;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1);
+}
+
+#map {
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact input,
+.contact textarea {
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact button {
+    background-color: #003366;
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+
+.contact button:hover {
+    background-color: #004080;
+}
+
+footer {
+    background-color: #003366;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+footer a {
+    color: #ffde59;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.scroll-reveal {
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-down {
+    animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

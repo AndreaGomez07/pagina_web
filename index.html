@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía para Viajeros Latinos en el Reino Unido</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Guía para Viajeros Latinos en el Reino Unido</h1>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#alojamiento">Alojamiento</a></li>
+                    <li><a href="#comida">Comida</a></li>
+                    <li><a href="#transporte">Transporte</a></li>
+                    <li><a href="#eventos">Eventos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero section con gradiente y llamada a la acción -->
+        <section id="inicio" class="hero">
+            <div class="container">
+                <h2>Descubre el Reino Unido con nuestra guía</h2>
+                <p>Información esencial para disfrutar de tu viaje y explorar los mejores destinos.</p>
+                <button class="cta">Explorar ahora</button>
+            </div>
+        </section>
+
+        <!-- Alojamiento -->
+        <section id="alojamiento" class="content-section scroll-reveal">
+            <div class="container">
+                <h2>Alojamiento</h2>
+                <p>Encuentra opciones de hospedaje adaptadas a todos los presupuestos.</p>
+                <button class="toggle-info" onclick="mostrarMasInfo('alojamiento')">Más información</button>
+                <div id="info-alojamiento" class="info-box hidden slide-down">
+                    <p>Desde lujosos hoteles hasta acogedores hostales, te ayudamos a encontrar el lugar perfecto para tu estancia. Consulta plataformas como Booking.com y Airbnb.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comida -->
+        <section id="comida" class="content-section scroll-reveal">
+            <div class="container">
+                <h2>Comida</h2>
+                <p>Explora la deliciosa gastronomía británica y encuentra los mejores lugares para comer.</p>
+                <button class="toggle-info" onclick="mostrarMasInfo('comida')">Más información</button>
+                <div id="info-comida" class="info-box hidden slide-down">
+                    <p>No te pierdas los tradicionales fish and chips, así como la oferta culinaria multicultural de Londres y otras ciudades.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Transporte -->
+        <section id="transporte" class="content-section scroll-reveal">
+            <div class="container">
+                <h2>Transporte</h2>
+                <p>Todo lo que necesitas saber para moverte por el Reino Unido de manera eficiente.</p>
+                <button class="toggle-info" onclick="mostrarMasInfo('transporte')">Más información</button>
+                <div id="info-transporte" class="info-box hidden slide-down">
+                    <p>Utiliza el sistema de transporte público, incluyendo el famoso metro de Londres, autobuses y trenes interurbanos para explorar el país.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Eventos -->
+        <section id="eventos" class="content-section scroll-reveal">
+            <div class="container">
+                <h2>Eventos</h2>
+                <p>Descubre los eventos y festivales que no te puedes perder durante tu visita.</p>
+                <button class="toggle-info" onclick="mostrarMasInfo('eventos')">Más información</button>
+                <div id="info-eventos" class="info-box hidden slide-down">
+                    <p>Desde festivales de música hasta eventos culturales y deportivos, hay algo para todos los gustos. Consulta calendarios locales y mantente al tanto de los eventos.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Galería -->
+        <section id="galeria" class="content-section gallery scroll-reveal">
+            <div class="container">
+                <h2>Destinos Populares</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item"><img src="C:\Users\cubid\Pictures\londres.jpeg" alt="Londres"></div>
+                    <div class="gallery-item"><img src="C:\Users\cubid\Pictures\Edimburgo.jpeg" alt="Edimburgo"></div>
+                    <div class="gallery-item"><img src="C:\Users\cubid\Pictures\cambridge.jpeg" alt="Cambridge"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mapa -->
+        <section id="mapa" class="content-section scroll-reveal">
+            <div class="container">
+                <h2>Mapa Interactivo</h2>
+                <div id="map"></div>
+            </div>
+        </section>
+
+        <!-- Sección de Contacto con formulario -->
+        <section id="contacto" class="content-section contact scroll-reveal">
+            <div class="container">
+                <h2>Contacto</h2>
+                <p>¿Tienes alguna duda? Envíanos un mensaje y te responderemos a la brevedad.</p>
+                <form id="contact-form">
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu Nombre" required>
+                    <input type="email" id="email" name="email" placeholder="Tu Correo" required>
+                    <textarea id="mensaje" name="mensaje" placeholder="Tu Mensaje" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Guía para Viajeros Latinos en el Reino Unido | <a href="#">Contacto</a> | <a href="#">Síguenos en redes sociales</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+</body>
+</html>
+
